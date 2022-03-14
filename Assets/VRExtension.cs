@@ -10,6 +10,7 @@ public class VRExtension : XRGrabInteractable
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         bool isDirect = args.interactor is XRDirectInteractor;
+        attachTransform.position = args.interactor.attachTransform.position;
         attachTransform.rotation = args.interactor.attachTransform.rotation;
     }
 
